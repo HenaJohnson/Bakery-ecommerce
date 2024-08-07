@@ -1,0 +1,108 @@
+{% extends 'app/base.html'%}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block banner_slider %}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="{% static 'app/images/banner/img-1.jpg' %}" class="d-block w-100" height="500" alt="banner image">
+        </div>
+        <div class="carousel-item active">
+        <img src="{% static 'app/images/banner/img-2.jpg' %}" class="d-block w-100" height="500" alt="banner image">
+        </div>
+        <div class="carousel-item active">
+        <img src="{% static 'app/images/banner/img-3.jpg' %}" class="d-block w-100" height="500" alt="banner image">
+        </div>
+        <div class="carousel-item active">
+        <img src="{% static 'app/images/banner/img-4.jpg' %}" class="d-block w-100" height="500" alt="banner image">
+        </div>
+    </div>
+</div>
+{% endblock banner_slider %}
+
+{% block information %}
+<div class="container">
+    <div class="row bg-success text-center p-5 text-white border-bottom shadow">
+        <h1>Products</h1>
+        <small class="fs-5">
+            Baking, process of cooking by dry heat, especially in some kind of oven. It is probably the oldest cooking
+            method. Bakery products, which include bread, rolls, cookies,pastries, and muffins, are usually prepared
+            from flour or meal derived from some form of grain. Bread, already a common staple in prehistoric times,
+            provides many nutrients in the human diet.
+        </small>
+
+    </div>
+
+</div>
+{% endblock information %}
+
+{% block main-content %}
+<div class="container">
+    <h2 class="text-center">Bakery Products</h2>
+    <br><br>
+    <div class="row container">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+            <div class="biscuits smbg">
+                <a href="{% url 'category' 'BI' %}">
+                    <div class="goodness text-center">
+                        <img src="{% static 'app/images/product/biscuit-1.jpg' %}"
+                            class="img-responsive center-block" width="250" height="250" alt="">
+                        <p class="biscuit">Biscuits</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+            <div class="bread smbg">
+                <a href="{% url 'category' 'BR' %}">
+                    <div class="goodness text-center">
+                        <img src="{% static 'app/images/product/bread-1.jpg' %}"
+                            class="img-responsive center-block" width="250" height="250" alt="">
+                        <p class="biscuit">Bread</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+            <div class="cake smbg">
+                <a href="{% url 'category' 'CK' %}">
+                    <div class="goodness text-center">
+                        <img src="{% static 'app/images/product/cake-1.jpg' %}"
+                            class="img-responsive center-block" width="250" height="250" alt="">
+                        <p class="biscuit">Cakes</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+            <div class="chocolate smbg">
+                <a href="{% url 'category' 'CH' %}">
+                    <div class="goodness text-center">
+                        <img src="{% static 'app/images/product/chocolate-1.jpg' %}"
+                            class="img-responsive center-block" width="250" height="250" alt="">
+                        <p class="biscuit">Chocolate</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"
+        style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+        <div class="drink smbg">
+            <a href="{% url 'category' 'DI' %}">
+                <div class="goodness text-center">
+                    <img src="{% static 'app/images/product/drink-1.jpeg' %}"
+                        class="img-responsive center-block" width="300" height="250" alt="">
+                    <p class="biscuit">Drinks</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    </div>
+</div>
+<br><br>
+{% endblock main-content %}
